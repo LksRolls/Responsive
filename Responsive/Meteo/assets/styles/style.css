@@ -12,21 +12,18 @@ header {
 
 .container {
     position: relative;
-    width: 80%;  /* Largeur ajustée pour 60% de l'écran */
-    max-width: 1200px;
+    width: 70%; 
     background-color: white;
     color: #333;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px gray;
     margin: 20px auto;
 }
 
 .InfoPrincip {
     position: relative;
-    display: inline-block;
-    width: 60%;  /* Occupe 60% de l'espace pour laisser place à InfoSupp */
-    vertical-align: top;
+    width: 100%;  
 }
 
 .title h2 {
@@ -68,10 +65,15 @@ header {
     transform: translateY(-50%);
 }
 
+.Info{
+    margin-left: 8%;
+}
+
 .InfoSupp {
-    display: inline-block;
-    width: 35%;  /* Place InfoSupp à droite d'Info avec 35% de largeur */
-    vertical-align: top;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    width: 40%;  
 }
 
 .InfoSupp h4 {
@@ -80,20 +82,26 @@ header {
     color: gray;
 }
 
+/* Organisation des jours */
 .Jours {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: block;
+    margin-top: 1rem;
     text-align: center;
+    width: 100%; 
+    margin-left: 3%; 
+    text-align: left; 
 }
 
 .Jours div {
-    width: 40px;
+    display: inline-block;
+    width: 13%;
+    vertical-align: top;
+    text-align: center;
 }
 
 .Jours h4 {
     margin: 5px 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #333;
 }
 
@@ -104,16 +112,16 @@ header {
 
 .Jours h5 {
     margin: 0;
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: gray;
 }
 
 .Jours .temp-max {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #333;
 }
 
 .Jours .temp-min {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: gray;
 }
