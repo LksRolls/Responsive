@@ -1,11 +1,194 @@
-body {
+/* Reset CSS */
+* {
     margin: 0;
-    background-color: whitesmoke;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-header {
-    padding: 1rem;
+/* Icône */
+.icon {
+    width: 8%;
+    height: auto;
+}
+
+.iconPrincip{
+    width: 20%;
+    height: auto;
+}
+
+/* Menu Burger */
+.burger {
+    top: 5px;
+    left: 90%;
+    position: absolute;
+    border: none;
+}
+
+/* Header inférieur */
+.bottom_header {
+    position: relative;
+    left: 30%;
     text-align: center;
-    background-color: #9dd8e2;
+    margin-bottom: 10%;
+}
+.link{
+    display:none;
+}
+.bottom_header h1 {
+    padding-bottom: 6%;
+}
+
+/* Section principale */
+main h2 {
+    position: relative;
+    left: 2%;
+}
+
+main p {
+    margin: 2%;
+    font-size: 15px;
+    color: grey;
+    position: relative;
+    left: 4%;
+    max-width: 390px;
+}
+
+/* Articles */
+article {
+    display: inline-block;
+    margin: 2%;
+    width:88%;
+    background-color: #333;
+    padding: 3%;
+    border-radius: 20px;
+    color: #f9f9f9;
+}
+
+article p {
+    font-size: 12px;
+    position: relative;
+}
+
+/* Image personnalisée */
+.img_custom {
+    width: 25%;
+    height: auto;
+}
+.col-sm-1 {
+    width: calc(100% / 12); /* 1 colonne sur 12 */
+}
+
+.col-sm-2 {
+    width: calc(200% / 12); /* 2 colonnes sur 12 */
+}
+
+.col-sm-3 {
+    width: calc(300% / 12); /* 3 colonnes sur 12 */
+}
+
+.col-sm-4 {
+    width: calc(400% / 12); /* 4 colonnes sur 12 */
+}
+
+.col-sm-5 {
+    width: calc(500% / 12); /* 5 colonnes sur 12 */
+}
+
+.col-sm-6 {
+    width: calc(600% / 12); /* 6 colonnes sur 12 */
+}
+
+.col-sm-7 {
+    width: calc(700% / 12); /* 7 colonnes sur 12 */
+}
+
+.col-sm-8 {
+    width: calc(800% / 12); /* 8 colonnes sur 12 */
+}
+
+.col-sm-9 {
+    width: calc(900% / 12); /* 9 colonnes sur 12 */
+}
+
+.col-sm-10 {
+    width: calc(1000% / 12); /* 10 colonnes sur 12 */
+}
+
+.col-sm-11 {
+    width: calc(1100% / 12); /* 11 colonnes sur 12 */
+}
+
+.col-sm-12 {
+    width: 100%; /* 12 colonnes sur 12 */
+}
+
+/* Responsive pour les écrans supérieurs ou égaux à 700px */
+@media (min-width: 700px) {
+    .col-sm-1 {
+        width: calc(100% / 12);
+    }
+    .col-sm-2 {
+        width: calc(200% / 12);
+    }
+    .col-sm-3 {
+        width: calc(300% / 12);
+    }
+    .col-sm-4 {
+        width: calc(400% / 12);
+    }
+    .burger{
+        display: none;
+    }
+    .link{
+        display:inline-block;
+        position: relative;
+        margin-inline:10%;
+        width:80%;
+        margin-bottom: 10%;
+    }
+    .main{
+        margin-left:10%;
+        margin-right:10%;
+    }
+    .bottom_header {
+        left: 40%;
+    }
+    .link_a{
+        margin-right:43%;
+    }
+    .link_b{
+        margin-right:37%;
+    }
+    article {
+        margin-inline:10%;
+        width:80%;
+    }
+    main p {
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 900px)  and (max-width:1199px) {
+  article{
+    min-width:20%;
+    max-width: 40%;
+    margin:5%;
+    display: float;
+    float:left;
+  }
+  article:last-child{
+   margin-left:30%;
+  }
+}
+
+/* Pour les ordinateurs de bureau (1200px et plus) */
+@media (min-width: 1200px) {
+    article{
+        max-width: 28%;
+        margin:2.5%;
+        display: float;
+        float:left;
+      }
+    
 }
