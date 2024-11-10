@@ -28,6 +28,7 @@ header, .title, .Grille {
     right: 1%;
     width: 5%;
     transform: translateY(-50%);
+    display: block;
 }
 
 /* Deuxième partie du header */
@@ -93,4 +94,50 @@ header, .title, .Grille {
     font-size: 1em;
     line-height: 1.5em;
     color: #333; 
+}
+
+/* Responsive pour écran > 700px (sm) */
+@media (min-width: 700px) {
+    .Grille div article {
+        width: 80%;
+    }
+
+    .link {
+        padding: 1% 10%;
+    }
+
+    .topHeader button {
+        display: none;
+    }
+}
+
+/* Responsive pour écran > 900px (md) */
+@media (min-width: 900px) {
+    .Grille div article {
+        width: 70%;
+    }
+
+    .link button {
+        padding: 0.8%;
+        font-size: 1.1em;
+    }
+}
+
+/* Responsive pour écran > 1200px (lg) */
+@media (min-width: 1200px) {
+    .Grille div article {
+        width: 60%;
+    }
+
+    .bottomHeader img {
+        width: 20%;
+    }
+
+    .link {
+        padding: 1% 20%;
+    }
+
+    .link button {
+        font-size: 1.2em;
+    }
 }
