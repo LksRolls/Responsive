@@ -1,14 +1,14 @@
-/* body */
-body{
+/* Global */
+body {
     margin: 0;
 }
 
-/* Style pour le header */
-header {
+header, .title, .Grille {
     width: 100%;
+    margin-top: 3%;
 }
 
-/* Premeire partie du header*/
+/* Style pour le header */
 .topHeader {
     position: relative;
     height: 100%;
@@ -19,15 +19,18 @@ header {
     top: 50%;
     left: 1%;
     width: 5%;
+    transform: translateY(-50%);
 }
 
 .topHeader button {
     position: absolute;
     top: 50%;
     right: 1%;
+    width: 5%;
+    transform: translateY(-50%);
 }
 
-/* Deuxieme partie du header*/
+/* Deuxième partie du header */
 .bottomHeader {
     text-align: center;
 }
@@ -35,42 +38,59 @@ header {
 .bottomHeader img {
     display: block;
     margin: 0 auto;
-    width: 25%; 
+    width: 25%;
 }
 
 /* Titre et liens */
-.title{
-    width: 100%;
-}
-
-/* liens */
-.link button{
+.title {
     text-align: center;
-    justify-content: space-around;
+    margin-bottom: 3%;
 }
 
-
-/* Responsive entre 900px et 1200px */
-@media (min-width: 900px)  and (max-width:1199px) {
-  article{
-    min-width:20%;
-    max-width: 40%;
-    margin:5%;
-    display: float;
-    float:left;
-  }
-  article:last-child{
-   margin-left:30%;
-  }
+/* Conteneur pour les boutons */
+.link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto 2%; 
+    padding: 1% 5%;
+    box-sizing: border-box;
 }
 
-/* Responsive pour les + de 1200px */
-@media (min-width: 1200px) {
-    article{
-        max-width: 28%;
-        margin:2.5%;
-        display: float;
-        float:left;
-      }
-    
+/* Boutons dans .link */
+.link button {
+    padding: 1%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Style général pour chaque article */
+.Grille div article {
+    position: relative;
+    width: 90%; 
+    margin: 2% auto;
+    padding: 2%;
+    background-color: #e0e0e0; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box;
+}
+
+/* Style de l'image en haut à gauche */
+.Grille div article img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20%; 
+    height: auto;
+}
+
+/* Style du texte */
+.Grille div article p {
+    margin-left: 25%; 
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #333; 
 }
