@@ -1,4 +1,4 @@
-/* Global */
+/* ----- Body ----- */
 body {
     margin: 0;
 }
@@ -8,7 +8,7 @@ header, .title, .Grille {
     margin-top: 3%;
 }
 
-/* Style pour le header */
+/* ----- Style pour le header ----- */
 .topHeader {
     position: relative;
     height: 100%;
@@ -31,7 +31,7 @@ header, .title, .Grille {
     display: block;
 }
 
-/* Deuxième partie du header */
+/* ----- Deuxième partie du header ----- */
 .bottomHeader {
     text-align: center;
 }
@@ -42,13 +42,13 @@ header, .title, .Grille {
     width: 25%;
 }
 
-/* Titre et liens */
+/* ----- Titre et liens ----- */
 .title {
     text-align: center;
     margin-bottom: 3%;
 }
 
-/* Conteneur pour les boutons */
+/* ----- Conteneur pour les boutons ----- */
 .link {
     display: flex;
     justify-content: space-between;
@@ -58,14 +58,14 @@ header, .title, .Grille {
     box-sizing: border-box;
 }
 
-/* Boutons dans .link */
+/* ----- Boutons dans link ----- */
 .link button {
     padding: 1%;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* Style général pour chaque article */
+/* ----- Style général pour chaque article ----- */
 .Grille div article {
     position: relative;
     width: 90%; 
@@ -78,7 +78,7 @@ header, .title, .Grille {
     box-sizing: border-box;
 }
 
-/* Style de l'image en haut à gauche */
+/* ----- Style de l'image en haut à gauche ----- */
 .Grille div article img {
     position: absolute;
     top: 10px;
@@ -87,7 +87,7 @@ header, .title, .Grille {
     height: auto;
 }
 
-/* Style du texte */
+/* ----- Style du texte ----- */
 .Grille div article p {
     margin-left: 25%; 
     text-align: justify;
@@ -96,35 +96,42 @@ header, .title, .Grille {
     color: #333; 
 }
 
-/* Responsive pour écran > 700px (sm) */
+/* ----- Responsive pour écran > 700px  ----- */
 @media (min-width: 700px) {
     .topHeader button {
-        display: none; /* Cache le bouton sur les écrans > 700px */
+        display: none; 
     }
 }
 
-/* Responsive pour écran > 900px (md) */
+/* ----- Responsive pour écran > 900px ----- */
 @media (min-width: 900px) {
-    /* Conteneur de la grille */
     .Grille {
-        display: block;
         width: 80%;
         margin: 0 auto;
     }
 
-    /* Styles pour chaque article dans .Grille */
     .Grille div {
         display: inline-block;
-        vertical-align: top;
-        width: 45%; /* Ajustement pour deux articles côte à côte */
+        width: 45%;
         margin: 1%;
+        vertical-align: top;
         box-sizing: border-box;
     }
 
-    /* Le troisième article centré en dessous */
     .Grille div:nth-child(3) {
         display: block;
-        width: 60%; /* Largeur ajustée pour centrer le troisième article */
-        margin: 20px auto 0 auto; /* Centré horizontalement */
+        width: 60%; 
+        margin: 2% auto;
+    }
+}
+
+/* ----- Responsive pour écran > 1200px ----- */
+@media (min-width: 1200px) {
+    .Grille div {
+        display: inline-block;
+        width: 30%;
+        margin: 1%;
+        vertical-align: top;
+        box-sizing: border-box;
     }
 }
