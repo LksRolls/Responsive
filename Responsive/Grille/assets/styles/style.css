@@ -98,46 +98,33 @@ header, .title, .Grille {
 
 /* Responsive pour écran > 700px (sm) */
 @media (min-width: 700px) {
-    .Grille div article {
-        width: 80%;
-    }
-
-    .link {
-        padding: 1% 10%;
-    }
-
     .topHeader button {
-        display: none;
+        display: none; /* Cache le bouton sur les écrans > 700px */
     }
 }
 
 /* Responsive pour écran > 900px (md) */
 @media (min-width: 900px) {
-    .Grille div article {
-        width: 70%;
+    /* Conteneur de la grille */
+    .Grille {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
     }
 
-    .link button {
-        padding: 0.8%;
-        font-size: 1.1em;
-    }
-}
-
-/* Responsive pour écran > 1200px (lg) */
-@media (min-width: 1200px) {
-    .Grille div article {
-        width: 60%;
+    /* Styles pour chaque article dans .Grille */
+    .Grille div {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%; /* Ajustement pour deux articles côte à côte */
+        margin: 1%;
+        box-sizing: border-box;
     }
 
-    .bottomHeader img {
-        width: 20%;
-    }
-
-    .link {
-        padding: 1% 20%;
-    }
-
-    .link button {
-        font-size: 1.2em;
+    /* Le troisième article centré en dessous */
+    .Grille div:nth-child(3) {
+        display: block;
+        width: 60%; /* Largeur ajustée pour centrer le troisième article */
+        margin: 20px auto 0 auto; /* Centré horizontalement */
     }
 }
