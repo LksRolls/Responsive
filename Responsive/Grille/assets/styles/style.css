@@ -1,4 +1,4 @@
-/* ----- Body ----- */
+/* Global */
 body {
     margin: 0;
 }
@@ -8,7 +8,7 @@ header, .title, .Grille {
     margin-top: 3%;
 }
 
-/* ----- Style pour le header ----- */
+/* Style pour le header */
 .topHeader {
     position: relative;
     height: 100%;
@@ -31,7 +31,7 @@ header, .title, .Grille {
     display: block;
 }
 
-/* ----- Deuxième partie du header ----- */
+/* Deuxième partie du header */
 .bottomHeader {
     text-align: center;
 }
@@ -42,96 +42,121 @@ header, .title, .Grille {
     width: 25%;
 }
 
-/* ----- Titre et liens ----- */
+/* Titre et liens */
 .title {
     text-align: center;
     margin-bottom: 3%;
 }
 
-/* ----- Conteneur pour les boutons ----- */
+/* Conteneur pour les boutons */
 .link {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 0 auto 2%; 
+    margin: 0 auto 2%;
     padding: 1% 5%;
     box-sizing: border-box;
 }
 
-/* ----- Boutons dans link ----- */
+/* Boutons dans .link */
 .link button {
     padding: 1%;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* ----- Style général pour chaque article ----- */
+/* Style général pour chaque article */
 .Grille div article {
     position: relative;
-    width: 90%; 
+    width: 90%;
     margin: 2% auto;
     padding: 2%;
-    background-color: #e0e0e0; 
-    border: 1px solid #ccc; 
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-/* ----- Style de l'image en haut à gauche ----- */
+/* Style de l'image en haut à gauche */
 .Grille div article img {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 20%; 
+    width: 20%;
     height: auto;
 }
 
-/* ----- Style du texte ----- */
+/* Style du texte */
 .Grille div article p {
-    margin-left: 25%; 
+    margin-left: 25%;
     text-align: justify;
     font-size: 1em;
     line-height: 1.5em;
-    color: #333; 
+    color: #333;
 }
 
-/* ----- Responsive pour écran > 700px  ----- */
+/* Responsive pour écran > 700px (sm) */
 @media (min-width: 700px) {
     .topHeader button {
-        display: none; 
+        display: none;
     }
 }
 
-/* ----- Responsive pour écran > 900px ----- */
+/* Responsive pour écran > 900px (md) */
 @media (min-width: 900px) {
     .Grille {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        text-align: center;
     }
 
+    /* Deux articles côte à côte */
     .Grille div {
         display: inline-block;
         width: 45%;
         margin: 1%;
         vertical-align: top;
+    }
+
+    /* Troisième article en dessous */
+    .Grille div:nth-child(3) {
+        display: block;
+        width: 60%;
+        margin: 2% auto 0;
+    }
+}
+
+/* Responsive pour écran > 1200px (lg) */
+@media (min-width: 1200px) {
+    .Grille {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden; /* Contient les flottants */
+    }
+
+    /* Articles côte à côte */
+    .Grille div {
+        float: left;
+        width: 30%; /* Pour trois articles alignés */
+        margin: 1%;
         box-sizing: border-box;
     }
 
     .Grille div:nth-child(3) {
-        display: block;
-        width: 60%; 
-        margin: 2% auto;
-    }
-}
-
-/* ----- Responsive pour écran > 1200px ----- */
-@media (min-width: 1200px) {
-    .Grille div {
-        display: inline-block;
         width: 30%;
         margin: 1%;
-        vertical-align: top;
+    }
+
+    /* Uniformisation de l'article */
+    .Grille div article {
+        width: 100%;
+        padding: 2%;
+        background-color: #e0e0e0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
+        min-height: 300px;
     }
 }
