@@ -1,4 +1,4 @@
-/* Global */
+/* Body */
 body {
     margin: 0;
 }
@@ -42,13 +42,13 @@ header, .title, .Grille {
     width: 25%;
 }
 
-/* Titre et liens */
+/* Titre */
 .title {
     text-align: center;
     margin-bottom: 3%;
 }
 
-/* Conteneur pour les boutons */
+/* Conteneur des 3 boutons */
 .link {
     display: flex;
     justify-content: space-between;
@@ -65,7 +65,7 @@ header, .title, .Grille {
     text-align: center;
 }
 
-/* Style général pour chaque article */
+/* Style pour chaque article */
 .Grille div article {
     position: relative;
     width: 90%;
@@ -87,7 +87,7 @@ header, .title, .Grille {
     height: auto;
 }
 
-/* Style du texte */
+/* Style du texte dans les articles dans la grille */
 .Grille div article p {
     margin-left: 25%;
     text-align: justify;
@@ -111,7 +111,6 @@ header, .title, .Grille {
         text-align: center;
     }
 
-    /* Deux articles côte à côte */
     .Grille div {
         display: inline-block;
         width: 45%;
@@ -119,7 +118,6 @@ header, .title, .Grille {
         vertical-align: top;
     }
 
-    /* Troisième article en dessous */
     .Grille div:nth-child(3) {
         display: block;
         width: 60%;
@@ -132,13 +130,12 @@ header, .title, .Grille {
     .Grille {
         width: 90%;
         margin: 0 auto;
-        overflow: hidden; /* Contient les flottants */
+        overflow: hidden; 
     }
 
-    /* Articles côte à côte */
     .Grille div {
         float: left;
-        width: 30%; /* Pour trois articles alignés */
+        width: 30%;
         margin: 1%;
         box-sizing: border-box;
     }
@@ -148,7 +145,6 @@ header, .title, .Grille {
         margin: 1%;
     }
 
-    /* Uniformisation de l'article */
     .Grille div article {
         width: 100%;
         padding: 2%;
